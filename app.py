@@ -378,6 +378,8 @@ def generar():
             download_name=f"Cotizacion_{folio}_{nombre}.pdf"
         )
     except Exception as e:
+        import traceback
+        traceback.print_exc()
         return jsonify({'error': str(e)}), 500
 
 
